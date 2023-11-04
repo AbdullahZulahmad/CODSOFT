@@ -1,0 +1,436 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.header::after {
+  content: "";
+  background: url(images/bike-bg.jpeg) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.main-view {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(61, 61, 61, 0.212) 0%,
+    rgb(30, 30, 30) 100%
+  );
+}
+.navbar > .logo > img {
+  margin: 8px 12px;
+  width: 250px;
+}
+.navbar {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: rgba(245, 245, 220, 0.406); */
+}
+.navitems {
+  /* background-color: rgba(250, 235, 215, 0.473); */
+  color: white;
+  font-size: 18px;
+}
+.navitems > ul {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.navitems > ul > li {
+  list-style: none;
+  padding: 8px 10px;
+  margin: 0px 8px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+.navitems > ul > li:hover {
+  background-color: #ff0000;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+.navitems > ul > li > a {
+  text-decoration: none;
+  color: white;
+}
+.navitems > ul > li:nth-child(5) {
+  position: relative;
+  /* right: 2rem; */
+}
+.navitems > ul > li:nth-child(5):hover {
+  animation: cart-movement 3s infinite;
+  background-color: rgba(255, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+@keyframes cart-movement {
+  0% {
+    right: 0px;
+  }
+  50% {
+    right: 30px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+.home-page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+  margin: 9rem 3rem;
+}
+.home-page > h1 {
+  font-size: 4rem;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+}
+.home-page > button {
+  margin: 2rem 0;
+  padding: 12px 18px;
+  font-size: 18px;
+}
+.cycledisplay {
+  background-color: rgb(30, 30, 30);
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+}
+.cycles {
+  display: flex;
+  /* position: relative; */
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 14px; */
+}
+.cycledisplay > h1 {
+  color: white;
+  /* position: absolute; */
+  /* z-index: 1; */
+  font-size: 8rem;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  font-weight: 600;
+  text-align: center;
+}
+.cycles > img:nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+}
+.cycles > img:nth-child(3) {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+}
+.cycles > img:nth-child(2) {
+  width: 70vw;
+  /* height: 75vh; */
+  position: absolute;
+  top: 0px;
+  /* left: 14rem; */
+}
+.cycle-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 4rem 1rem 4rem;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  color: white;
+}
+.cycle-info > div {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  padding: 16px 0rem;
+  color: white;
+}
+.cycle-info div {
+  padding: 0rem 4rem;
+}
+.cycle-info div span {
+  padding: 8px 0;
+}
+.cycle-button > button {
+  /* margin-bottom: 2rem; */
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  font-size: 18px;
+  margin: 1.5rem 16px 2rem 16px;
+}
+.cycle-button > button:nth-child(2) {
+  color: white;
+  border: 1px solid white;
+  background-color: rgb(30, 30, 30);
+}
+.cycle-button > button:nth-child(2):hover {
+  background-color: white;
+  color: red;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+.frame {
+  position: relative;
+  background-color: rgb(30, 30, 30);
+  color: white;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  height: 80vh;
+  padding-top: 4rem;
+}
+.frame > h1 {
+  /* color: white; */
+  font-weight: 500;
+  text-align: center;
+}
+.frame > img {
+  position: absolute;
+  width: 50vw;
+  top: 5rem;
+  left: 20rem;
+  /* z-index: 1; */
+}
+.frame-info > p {
+  position: absolute;
+  /* color: white; */
+}
+.frame-info p:nth-child(1) {
+  bottom: 11rem;
+  left: 29rem;
+  font-size: 12px;
+}
+.frame-info p:nth-child(2) {
+  top: 14rem;
+  left: 36rem;
+  font-size: 12px;
+}
+.frame-header-1 {
+  position: absolute;
+  right: 28rem;
+  top: 16rem;
+  letter-spacing: 6px;
+  font-size: 48px;
+}
+.frame-header-2 {
+  position: absolute;
+  letter-spacing: 6px;
+  right: 24rem;
+  top: 20rem;
+  font-size: 48px;
+}
+.frame-p {
+  position: absolute;
+  padding: auto auto;
+  top: 24rem;
+  right: 8rem;
+}
+.suspension {
+  background-color: rgb(30, 30, 30);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+}
+.suspension > img {
+  width: 40%;
+  margin-left: 12rem;
+}
+.suspensioninfo {
+  position: absolute;
+  text-wrap: wrap;
+  padding-right: 52rem;
+  left: 16rem;
+}
+.suspensioninfo > h1 {
+  font-size: 48px;
+}
+.suspensioninfo > p {
+  text-wrap: wrap;
+}
+.tyre {
+  background-color: rgb(30, 30, 30);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+}
+.tyre > img {
+  width: 40%;
+  margin-left: 12rem;
+}
+.tyreinfo {
+  position: absolute;
+  text-wrap: wrap;
+  padding-right: 52rem;
+  left: 16rem;
+}
+.tyreinfo > h1 {
+  font-size: 48px;
+}
+.tyreinfo > p {
+  text-wrap: wrap;
+}
+.comments {
+  background-color: rgb(30, 30, 30);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  color: white;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+}
+.comments > h1 {
+  text-align: center;
+}
+.reviews {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* margin: 4rem 0 1rem 0; */
+}
+.reviews > p {
+  font-size: 38px;
+  padding: 6rem 10rem 6rem 10rem;
+  text-align: center;
+  font-weight: 300;
+}
+.reviews > img {
+  margin: 0px 3rem;
+  cursor: pointer;
+}
+.comments > span {
+  font-size: 38px;
+  font-weight: 200;
+}
+.contactme {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-content: center;
+  align-items: center;
+  color: white;
+  height: 85vh;
+}
+.contactme::after {
+  content: "";
+  background: url(images/aboutus-img.jpeg) no-repeat center center/cover;
+  background-position-y: -30rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 35vh;
+  z-index: -1;
+}
+.email {
+  /* flex: 2; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 35vh;
+}
+.email > input {
+  width: 22rem;
+  height: 2rem;
+  font-size: 32px;
+  padding: 12px 16px;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(6px);
+}
+.email > button {
+  font-size: 28px;
+  padding: 12px 16px;
+  border: 1px solid white;
+  margin: 0 4px;
+  transition: all 0.3s;
+}
+.email > button:hover {
+  background-color: #ff000000;
+  backdrop-filter: blur(6px);
+}
+.aboutus {
+  /* flex: 2; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+  background-color: rgb(30, 30, 30);
+}
+.aboutus > img {
+  width: 250px;
+}
+.aboutlinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutlinks > a {
+  padding: 0.5rem 0.8rem;
+}
+.aboutitems {
+  display: flex;
+  /* justify-content: space-evenly; */
+  align-items: stretch;
+}
+.aboutitems div {
+  margin: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+}
+.aboutitems div > h1 {
+  margin: 12px 0;
+}
+.aboutitems div > p {
+  margin: 6px 0;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: rgb(30, 30, 30);
+}
+.payments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.payments > img {
+  width: 50px;
+  margin: 16px;
+}
+.rights {
+  padding: 8px;
+}
+.rights > p {
+  font-size: 20px;
+  font-weight: 100;
+}
+.buttons {
+  border-radius: 2px;
+  padding: 12px 18px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0);
+  background-color: #ff0000;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.buttons:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border: 1px solid white;
+}
