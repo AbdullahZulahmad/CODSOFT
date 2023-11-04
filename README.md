@@ -1,3 +1,3 @@
 # CODSOFT
 
-Author Abdullah Zulfiqar(Hacker)
+Author Abdullah Zulfiqar
